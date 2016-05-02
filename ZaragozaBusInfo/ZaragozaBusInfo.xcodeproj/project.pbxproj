@@ -50,6 +50,7 @@
 		0DAB121D1CD7F9F600DC7103 /* BusListCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusListCustomCell.xib; sourceTree = "<group>"; };
 		0DAB121F1CD7FA2500DC7103 /* BusListCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusListCustomCell.h; sourceTree = "<group>"; };
 		0DAB12201CD7FA2500DC7103 /* BusListCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusListCustomCell.m; sourceTree = "<group>"; };
+		0DAB12221CD7FCF700DC7103 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,13 +94,14 @@
 			children = (
 				0DAB11F51CD7F6CA00DC7103 /* AppDelegate.h */,
 				0DAB11F61CD7F6CA00DC7103 /* AppDelegate.m */,
-				0DAB11F81CD7F6CA00DC7103 /* ViewController.h */,
-				0DAB11F91CD7F6CA00DC7103 /* ViewController.m */,
 				0DAB121F1CD7FA2500DC7103 /* BusListCustomCell.h */,
 				0DAB12201CD7FA2500DC7103 /* BusListCustomCell.m */,
+				0DAB121D1CD7F9F600DC7103 /* BusListCustomCell.xib */,
+				0DAB11F81CD7F6CA00DC7103 /* ViewController.h */,
+				0DAB11F91CD7F6CA00DC7103 /* ViewController.m */,
 				0DAB121A1CD7F9CA00DC7103 /* RequestManager.h */,
 				0DAB121B1CD7F9CA00DC7103 /* RequestManager.m */,
-				0DAB121D1CD7F9F600DC7103 /* BusListCustomCell.xib */,
+				0DAB12221CD7FCF700DC7103 /* Constants.h */,
 				0DAB11FB1CD7F6CA00DC7103 /* Main.storyboard */,
 				0DAB12011CD7F6CA00DC7103 /* Assets.xcassets */,
 				0DAB12031CD7F6CA00DC7103 /* LaunchScreen.storyboard */,
