@@ -10,4 +10,8 @@
 
 @interface BusListCustomCell : UITableViewCell
 
+@property (strong, nonatomic) UILabel *busInfoLabel;
+@property (strong, nonatomic) UIImageView *locationImageView;
+
+
 @end
