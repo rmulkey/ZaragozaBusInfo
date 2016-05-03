@@ -37,7 +37,6 @@
 		0DAB12721CD90C2000DC7103 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB12671CD90C2000DC7103 /* AFURLRequestSerialization.m */; };
 		0DAB12731CD90C2000DC7103 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB12691CD90C2000DC7103 /* AFURLResponseSerialization.m */; };
 		0DAB12741CD90C2000DC7103 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB126B1CD90C2000DC7103 /* AFURLSessionManager.m */; };
-		0DAB12771CD91A8500DC7103 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB12761CD91A8500DC7103 /* DetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,8 +110,6 @@
 		0DAB12691CD90C2000DC7103 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		0DAB126A1CD90C2000DC7103 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
 		0DAB126B1CD90C2000DC7103 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
-		0DAB12751CD91A8500DC7103 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
-		0DAB12761CD91A8500DC7103 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +154,6 @@
 				0DAB12311CD9064200DC7103 /* Model */,
 				0DAB11F81CD7F6CA00DC7103 /* ViewController.h */,
 				0DAB11F91CD7F6CA00DC7103 /* ViewController.m */,
-				0DAB12751CD91A8500DC7103 /* DetailsViewController.h */,
-				0DAB12761CD91A8500DC7103 /* DetailsViewController.m */,
 				0DAB12281CD883E300DC7103 /* BusListCell.h */,
 				0DAB12291CD883E300DC7103 /* BusListCell.m */,
 				0DAB11FB1CD7F6CA00DC7103 /* Main.storyboard */,
@@ -373,7 +368,6 @@
 				0DAB12511CD90C1200DC7103 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				0DAB12551CD90C1200DC7103 /* UIImageView+AFNetworking.m in Sources */,
 				0DAB12571CD90C1200DC7103 /* UIRefreshControl+AFNetworking.m in Sources */,
-				0DAB12771CD91A8500DC7103 /* DetailsViewController.m in Sources */,
 				0DAB12001CD7F6CA00DC7103 /* ZaragozaBusInfo.xcdatamodeld in Sources */,
 				0DAB12521CD90C1200DC7103 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				0DAB11F71CD7F6CA00DC7103 /* AppDelegate.m in Sources */,
