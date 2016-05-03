@@ -26,6 +26,11 @@
     
 }
 
+- (void) refreshTableView {
+    
+    [self fetchData];
+}
+
 #pragma mark - TableView Delegates
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -53,7 +58,18 @@
     
     
     cell.titleLabel.text = [NSString stringWithFormat:@"%@", busValues[@"title"]];
-    cell.subTitleLabel.text = [NSString stringWithFormat:@"%@", busValues[@"subtitle"]];
+    
+    // Handling cases in which the subtitle is null
+    
+    if (busValues[@"subtitle"]) {
+        
+        cell.subTitleLabel.text = [NSString stringWithFormat:@"%@", busValues[@"subtitle"]];
+        
+    } else {
+        cell.subTitleLabel.text = @"N/A - Not Available";
+    }
+    
+    // asynchronously fetching the image from the google maps API, using AFNetworking
     
     NSString *imageUrl = [NSString stringWithFormat:@"%@=%@,%@", GET_IMAGE_URL, busValues[@"lat"], busValues[@"lon"]];
     
@@ -114,6 +130,7 @@
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [self.activityIndicator stopAnimating];
                         [self.busListTableView reloadData];
+                        
                     });
                 }
             } else {
