@@ -8,8 +8,10 @@
 
 #import "ViewController.h"
 #import "BusListCell.h"
+#import "Constants.h"
 #import "RequestManager.h"
 #import "Reachability.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation ViewController
 
@@ -52,6 +54,12 @@
     
     cell.titleLabel.text = [NSString stringWithFormat:@"%@", busValues[@"title"]];
     cell.subTitleLabel.text = [NSString stringWithFormat:@"%@", busValues[@"subtitle"]];
+    
+    NSString *imageUrl = [NSString stringWithFormat:@"%@=%@,%@", GET_IMAGE_URL, busValues[@"lat"], busValues[@"lon"]];
+    
+    NSLog(@"Image URL: %@", imageUrl);
+    
+    [cell.mapImageView setImageWithURL:[NSURL URLWithString:imageUrl]];
 
     return cell;
 
