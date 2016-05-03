@@ -86,61 +86,67 @@
     
     if ([self isReachable]) {
         
-    RequestManager *requestManager = [[RequestManager alloc] initWithCallback:^(id responseObject) {
-        if ([responseObject isKindOfClass:[NSArray class]]) {
-            if ([responseObject count] > 0) {
-                
-                NSMutableArray *busSortValues = [NSMutableArray arrayWithArray:responseObject];
-                [busSortValues sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"id" ascending:YES]]];
-                
-                self.listOfBuses = busSortValues;
-                
-                NSLog(@"List: %@", self.listOfBuses);
-                
+        [self.activityIndicator startAnimating];
+            
+        RequestManager *requestManager = [[RequestManager alloc] initWithCallback:^(id responseObject) {
+            if ([responseObject isKindOfClass:[NSArray class]]) {
+                if ([responseObject count] > 0) {
+                    
+                    NSMutableArray *busSortValues = [NSMutableArray arrayWithArray:responseObject];
+                    [busSortValues sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"id" ascending:YES]]];
+                    
+                    self.listOfBuses = busSortValues;
+                    
+                    NSLog(@"List: %@", self.listOfBuses);
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.activityIndicator stopAnimating];
+                        [self.busListTableView reloadData];
+                    });
+                }
+            } else {
+
+                [self.activityIndicator stopAnimating];
+
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.busListTableView reloadData];
+                    
+                    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error Fetching the Buses"
+                                                                                             message:responseObject
+                                                                                      preferredStyle:UIAlertControllerStyleAlert];
+                    
+                    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                                          handler:^(UIAlertAction *action) {}];
+                    
+                    [alertController addAction:defaultAction];
+                    
+                    [self presentViewController:alertController animated:YES completion:nil];
+                    
                 });
             }
+        }];
+        
+        [requestManager fetchBusRoutes];
+            
         } else {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                
-                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error Fetching the Buses"
-                                                                                         message:responseObject
-                                                                                  preferredStyle:UIAlertControllerStyleAlert];
-                
-                UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                                      handler:^(UIAlertAction *action) {}];
-                
-                [alertController addAction:defaultAction];
-                
-                [self presentViewController:alertController animated:YES completion:nil];
-                
-            });
-        }
-    }];
-    
-    [requestManager fetchBusRoutes];
-        
-    } else {
-        
-        
-        UIAlertController *alertController = [UIAlertController
-                                              alertControllerWithTitle:@"Network is not available"
-                                              message:@"Please try again later"
-                                              preferredStyle:UIAlertControllerStyleAlert];
-        
-        
-        UIAlertAction *okAction = [UIAlertAction
-                                   actionWithTitle:@"OK"
-                                   style:UIAlertActionStyleDefault
-                                   handler:^(UIAlertAction *action)
-                                   {}];
-        
-        [alertController addAction:okAction];
+            
+            
+            UIAlertController *alertController = [UIAlertController
+                                                  alertControllerWithTitle:@"Network is not available"
+                                                  message:@"Please try again later"
+                                                  preferredStyle:UIAlertControllerStyleAlert];
+            
+            
+            UIAlertAction *okAction = [UIAlertAction
+                                       actionWithTitle:@"OK"
+                                       style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction *action)
+                                       {}];
+            
+            [alertController addAction:okAction];
 
-        [self presentViewController:alertController animated:YES completion:nil];
-        
-    }
+            [self presentViewController:alertController animated:YES completion:nil];
+            
+        }
 }
 
 -(BOOL)isReachable {

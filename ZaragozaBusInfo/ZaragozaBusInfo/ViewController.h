@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *busListTableView;
 @property (strong, nonatomic) NSArray *listOfBuses;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
