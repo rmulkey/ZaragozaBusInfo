@@ -93,18 +93,13 @@
 		0DAB11F11CD7F6CA00DC7103 /* ZaragozaBusInfo */ = {
 			isa = PBXGroup;
 			children = (
-				0DAB122D1CD9047500DC7103 /* Reachability.h */,
-				0DAB122E1CD9047500DC7103 /* Reachability.m */,
-				0DAB11F51CD7F6CA00DC7103 /* AppDelegate.h */,
-				0DAB11F61CD7F6CA00DC7103 /* AppDelegate.m */,
+				0DAB12311CD9064200DC7103 /* Model */,
 				0DAB11F81CD7F6CA00DC7103 /* ViewController.h */,
 				0DAB11F91CD7F6CA00DC7103 /* ViewController.m */,
 				0DAB12281CD883E300DC7103 /* BusListCell.h */,
 				0DAB12291CD883E300DC7103 /* BusListCell.m */,
-				0DAB121A1CD7F9CA00DC7103 /* RequestManager.h */,
-				0DAB121B1CD7F9CA00DC7103 /* RequestManager.m */,
-				0DAB12221CD7FCF700DC7103 /* Constants.h */,
 				0DAB11FB1CD7F6CA00DC7103 /* Main.storyboard */,
+				0DAB12301CD9062800DC7103 /* External */,
 				0DAB11F21CD7F6CA00DC7103 /* Supporting Files */,
 			);
 			path = ZaragozaBusInfo;
@@ -113,6 +108,8 @@
 		0DAB11F21CD7F6CA00DC7103 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0DAB11F51CD7F6CA00DC7103 /* AppDelegate.h */,
+				0DAB11F61CD7F6CA00DC7103 /* AppDelegate.m */,
 				0DAB12011CD7F6CA00DC7103 /* Assets.xcassets */,
 				0DAB12031CD7F6CA00DC7103 /* LaunchScreen.storyboard */,
 				0DAB12061CD7F6CA00DC7103 /* Info.plist */,
@@ -129,6 +126,25 @@
 				0DAB12111CD7F6CA00DC7103 /* Info.plist */,
 			);
 			path = ZaragozaBusInfoTests;
+			sourceTree = "<group>";
+		};
+		0DAB12301CD9062800DC7103 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				0DAB122D1CD9047500DC7103 /* Reachability.h */,
+				0DAB122E1CD9047500DC7103 /* Reachability.m */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		0DAB12311CD9064200DC7103 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0DAB12221CD7FCF700DC7103 /* Constants.h */,
+				0DAB121A1CD7F9CA00DC7103 /* RequestManager.h */,
+				0DAB121B1CD7F9CA00DC7103 /* RequestManager.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
