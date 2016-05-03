@@ -13,6 +13,11 @@
 
 @implementation ViewController
 
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    
+    [self fetchData];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -64,7 +69,7 @@
 
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 25, self.busListTableView.bounds.size.width, 20)];
     
-    label.backgroundColor = [UIColor whiteColor];
+    label.backgroundColor = [UIColor clearColor];
     label.font = [label.font fontWithSize:15];
     label.text = @"List of Buses in Zaragoza";
     label.textAlignment = NSTextAlignmentCenter;
@@ -75,6 +80,47 @@
         
     return sectionHeader;
     
+}
+
+- (void) fetchData {
+    
+    RequestManager *request = [RequestManager alloc];
+    [request fetchBusRoutes];
+    
+//    RequestManager *requestManager = [[RequestManager alloc] initWithCallback:^(id responseObject) {
+//        if ([responseObject isKindOfClass:[NSArray class]]) {
+//            if ([responseObject count] > 0) {
+//                
+//                NSMutableArray *busSortValues = [NSMutableArray arrayWithArray:responseObject];
+//                [busSortValues sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"id" ascending:YES]]];
+//                
+//                self.listOfBuses = busSortValues;
+//                
+//                NSLog(@"List: %@", self.listOfBuses);
+//                
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [self.busListTableView reloadData];
+//                });
+//            }
+//        } else {
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                
+//                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error Fetching the Buses"
+//                                                                                         message:responseObject
+//                                                                                  preferredStyle:UIAlertControllerStyleAlert];
+//                
+//                UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+//                                                                      handler:^(UIAlertAction *action) {}];
+//                
+//                [alertController addAction:defaultAction];
+//                
+//                [self presentViewController:alertController animated:YES completion:nil];
+//                
+//            });
+//        }
+//    }];
+//    
+//    [requestManager fetchBusRoutes];
 }
 
 

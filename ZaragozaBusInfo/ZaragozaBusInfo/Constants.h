@@ -9,7 +9,7 @@
 #ifndef Constants_h
 #define Constants_h
 
-#define BUS_API_BASE_URL @"http://api.dndzgz.com/services/bus"
+#define BUS_API_GET_URL @"http://api.dndzgz.com/services/bus"
 #define MAPS_IMAGE_API @"https://developers.google.com/maps/documentation/imageapis/"
 
 // example request:
