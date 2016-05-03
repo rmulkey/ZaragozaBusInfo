@@ -16,8 +16,7 @@
 		0DAB12051CD7F6CA00DC7103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DAB12031CD7F6CA00DC7103 /* LaunchScreen.storyboard */; };
 		0DAB12101CD7F6CA00DC7103 /* ZaragozaBusInfoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB120F1CD7F6CA00DC7103 /* ZaragozaBusInfoTests.m */; };
 		0DAB121C1CD7F9CA00DC7103 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB121B1CD7F9CA00DC7103 /* RequestManager.m */; };
-		0DAB121E1CD7F9F600DC7103 /* BusListCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DAB121D1CD7F9F600DC7103 /* BusListCustomCell.xib */; };
-		0DAB12211CD7FA2500DC7103 /* BusListCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB12201CD7FA2500DC7103 /* BusListCustomCell.m */; };
+		0DAB122A1CD883E300DC7103 /* BusListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB12291CD883E300DC7103 /* BusListCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +46,9 @@
 		0DAB12111CD7F6CA00DC7103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DAB121A1CD7F9CA00DC7103 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
 		0DAB121B1CD7F9CA00DC7103 /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
-		0DAB121D1CD7F9F600DC7103 /* BusListCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusListCustomCell.xib; sourceTree = "<group>"; };
-		0DAB121F1CD7FA2500DC7103 /* BusListCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusListCustomCell.h; sourceTree = "<group>"; };
-		0DAB12201CD7FA2500DC7103 /* BusListCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusListCustomCell.m; sourceTree = "<group>"; };
 		0DAB12221CD7FCF700DC7103 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		0DAB12281CD883E300DC7103 /* BusListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusListCell.h; sourceTree = "<group>"; };
+		0DAB12291CD883E300DC7103 /* BusListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusListCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,11 +92,10 @@
 			children = (
 				0DAB11F51CD7F6CA00DC7103 /* AppDelegate.h */,
 				0DAB11F61CD7F6CA00DC7103 /* AppDelegate.m */,
-				0DAB121F1CD7FA2500DC7103 /* BusListCustomCell.h */,
-				0DAB12201CD7FA2500DC7103 /* BusListCustomCell.m */,
-				0DAB121D1CD7F9F600DC7103 /* BusListCustomCell.xib */,
 				0DAB11F81CD7F6CA00DC7103 /* ViewController.h */,
 				0DAB11F91CD7F6CA00DC7103 /* ViewController.m */,
+				0DAB12281CD883E300DC7103 /* BusListCell.h */,
+				0DAB12291CD883E300DC7103 /* BusListCell.m */,
 				0DAB121A1CD7F9CA00DC7103 /* RequestManager.h */,
 				0DAB121B1CD7F9CA00DC7103 /* RequestManager.m */,
 				0DAB12221CD7FCF700DC7103 /* Constants.h */,
@@ -212,7 +209,6 @@
 				0DAB12051CD7F6CA00DC7103 /* LaunchScreen.storyboard in Resources */,
 				0DAB12021CD7F6CA00DC7103 /* Assets.xcassets in Resources */,
 				0DAB11FD1CD7F6CA00DC7103 /* Main.storyboard in Resources */,
-				0DAB121E1CD7F9F600DC7103 /* BusListCustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,8 +228,8 @@
 			files = (
 				0DAB121C1CD7F9CA00DC7103 /* RequestManager.m in Sources */,
 				0DAB11FA1CD7F6CA00DC7103 /* ViewController.m in Sources */,
+				0DAB122A1CD883E300DC7103 /* BusListCell.m in Sources */,
 				0DAB12001CD7F6CA00DC7103 /* ZaragozaBusInfo.xcdatamodeld in Sources */,
-				0DAB12211CD7FA2500DC7103 /* BusListCustomCell.m in Sources */,
 				0DAB11F71CD7F6CA00DC7103 /* AppDelegate.m in Sources */,
 				0DAB11F41CD7F6CA00DC7103 /* main.m in Sources */,
 			);
