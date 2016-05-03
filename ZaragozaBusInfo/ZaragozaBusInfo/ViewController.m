@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "BusListCell.h"
 #import "RequestManager.h"
-
+#import "Reachability.h"
 
 @implementation ViewController
 
@@ -84,6 +84,8 @@
 
 - (void) fetchData {
     
+    if ([self isReachable]) {
+        
     RequestManager *requestManager = [[RequestManager alloc] initWithCallback:^(id responseObject) {
         if ([responseObject isKindOfClass:[NSArray class]]) {
             if ([responseObject count] > 0) {
@@ -118,6 +120,35 @@
     }];
     
     [requestManager fetchBusRoutes];
+        
+    } else {
+        
+        
+        UIAlertController *alertController = [UIAlertController
+                                              alertControllerWithTitle:@"Network is not available"
+                                              message:@"Please try again later"
+                                              preferredStyle:UIAlertControllerStyleAlert];
+        
+        
+        UIAlertAction *okAction = [UIAlertAction
+                                   actionWithTitle:@"OK"
+                                   style:UIAlertActionStyleDefault
+                                   handler:^(UIAlertAction *action)
+                                   {}];
+        
+        [alertController addAction:okAction];
+
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+    }
+}
+
+-(BOOL)isReachable {
+    
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+    
+    return !(networkStatus == NotReachable);
 }
 
 

@@ -17,7 +17,7 @@
 		0DAB12101CD7F6CA00DC7103 /* ZaragozaBusInfoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB120F1CD7F6CA00DC7103 /* ZaragozaBusInfoTests.m */; };
 		0DAB121C1CD7F9CA00DC7103 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB121B1CD7F9CA00DC7103 /* RequestManager.m */; };
 		0DAB122A1CD883E300DC7103 /* BusListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB12291CD883E300DC7103 /* BusListCell.m */; };
-		0DAB122C1CD901D500DC7103 /* Reachability in Resources */ = {isa = PBXBuildFile; fileRef = 0DAB122B1CD901D500DC7103 /* Reachability */; };
+		0DAB122F1CD9047500DC7103 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB122E1CD9047500DC7103 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,8 @@
 		0DAB12221CD7FCF700DC7103 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		0DAB12281CD883E300DC7103 /* BusListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusListCell.h; sourceTree = "<group>"; };
 		0DAB12291CD883E300DC7103 /* BusListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusListCell.m; sourceTree = "<group>"; };
-		0DAB122B1CD901D500DC7103 /* Reachability */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Reachability; path = ../Reachability; sourceTree = "<group>"; };
+		0DAB122D1CD9047500DC7103 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		0DAB122E1CD9047500DC7103 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,8 @@
 		0DAB11F11CD7F6CA00DC7103 /* ZaragozaBusInfo */ = {
 			isa = PBXGroup;
 			children = (
+				0DAB122D1CD9047500DC7103 /* Reachability.h */,
+				0DAB122E1CD9047500DC7103 /* Reachability.m */,
 				0DAB11F51CD7F6CA00DC7103 /* AppDelegate.h */,
 				0DAB11F61CD7F6CA00DC7103 /* AppDelegate.m */,
 				0DAB11F81CD7F6CA00DC7103 /* ViewController.h */,
@@ -102,7 +105,6 @@
 				0DAB121B1CD7F9CA00DC7103 /* RequestManager.m */,
 				0DAB12221CD7FCF700DC7103 /* Constants.h */,
 				0DAB11FB1CD7F6CA00DC7103 /* Main.storyboard */,
-				0DAB122B1CD901D500DC7103 /* Reachability */,
 				0DAB11F21CD7F6CA00DC7103 /* Supporting Files */,
 			);
 			path = ZaragozaBusInfo;
@@ -210,7 +212,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DAB12051CD7F6CA00DC7103 /* LaunchScreen.storyboard in Resources */,
-				0DAB122C1CD901D500DC7103 /* Reachability in Resources */,
 				0DAB12021CD7F6CA00DC7103 /* Assets.xcassets in Resources */,
 				0DAB11FD1CD7F6CA00DC7103 /* Main.storyboard in Resources */,
 			);
@@ -233,6 +234,7 @@
 				0DAB121C1CD7F9CA00DC7103 /* RequestManager.m in Sources */,
 				0DAB11FA1CD7F6CA00DC7103 /* ViewController.m in Sources */,
 				0DAB122A1CD883E300DC7103 /* BusListCell.m in Sources */,
+				0DAB122F1CD9047500DC7103 /* Reachability.m in Sources */,
 				0DAB12001CD7F6CA00DC7103 /* ZaragozaBusInfo.xcdatamodeld in Sources */,
 				0DAB11F71CD7F6CA00DC7103 /* AppDelegate.m in Sources */,
 				0DAB11F41CD7F6CA00DC7103 /* main.m in Sources */,
