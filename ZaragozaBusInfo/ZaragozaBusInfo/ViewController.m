@@ -24,6 +24,8 @@
     
 }
 
+#pragma mark - TableView Delegates
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.listOfBuses count];
 }
@@ -81,6 +83,8 @@
     return sectionHeader;
     
 }
+
+#pragma mark - Fetching Data
 
 - (void) fetchData {
     
@@ -148,6 +152,8 @@
             
         }
 }
+
+#pragma mark - Reachability
 
 -(BOOL)isReachable {
     
