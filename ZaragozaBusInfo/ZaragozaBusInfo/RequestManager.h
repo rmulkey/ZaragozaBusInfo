@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^ApiConnectorCallback)(id);
+
 @interface RequestManager : NSObject
+
+@property (nonatomic, copy) ApiConnectorCallback callbackBlock;
+
+- (id)initWithCallback:(ApiConnectorCallback)block;
+- (void)fetchBusRoutes;
+
+
 
 @end

@@ -84,43 +84,40 @@
 
 - (void) fetchData {
     
-    RequestManager *request = [RequestManager alloc];
-    [request fetchBusRoutes];
+    RequestManager *requestManager = [[RequestManager alloc] initWithCallback:^(id responseObject) {
+        if ([responseObject isKindOfClass:[NSArray class]]) {
+            if ([responseObject count] > 0) {
+                
+                NSMutableArray *busSortValues = [NSMutableArray arrayWithArray:responseObject];
+                [busSortValues sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"id" ascending:YES]]];
+                
+                self.listOfBuses = busSortValues;
+                
+                NSLog(@"List: %@", self.listOfBuses);
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.busListTableView reloadData];
+                });
+            }
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error Fetching the Buses"
+                                                                                         message:responseObject
+                                                                                  preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                                      handler:^(UIAlertAction *action) {}];
+                
+                [alertController addAction:defaultAction];
+                
+                [self presentViewController:alertController animated:YES completion:nil];
+                
+            });
+        }
+    }];
     
-//    RequestManager *requestManager = [[RequestManager alloc] initWithCallback:^(id responseObject) {
-//        if ([responseObject isKindOfClass:[NSArray class]]) {
-//            if ([responseObject count] > 0) {
-//                
-//                NSMutableArray *busSortValues = [NSMutableArray arrayWithArray:responseObject];
-//                [busSortValues sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"id" ascending:YES]]];
-//                
-//                self.listOfBuses = busSortValues;
-//                
-//                NSLog(@"List: %@", self.listOfBuses);
-//                
-//                dispatch_async(dispatch_get_main_queue(), ^{
-//                    [self.busListTableView reloadData];
-//                });
-//            }
-//        } else {
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                
-//                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error Fetching the Buses"
-//                                                                                         message:responseObject
-//                                                                                  preferredStyle:UIAlertControllerStyleAlert];
-//                
-//                UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-//                                                                      handler:^(UIAlertAction *action) {}];
-//                
-//                [alertController addAction:defaultAction];
-//                
-//                [self presentViewController:alertController animated:YES completion:nil];
-//                
-//            });
-//        }
-//    }];
-//    
-//    [requestManager fetchBusRoutes];
+    [requestManager fetchBusRoutes];
 }
 
 

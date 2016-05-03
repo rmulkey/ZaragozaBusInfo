@@ -16,7 +16,43 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zaragoza Bus Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2I7-J5-QHG">
+                                <rect key="frame" x="231" y="247" width="139" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="rd7-jq-YSx"/>
+                                    <constraint firstAttribute="width" constant="139" id="uZk-Ac-zCQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code Challenge for Conichi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRf-Cc-FW6">
+                                <rect key="frame" x="196" y="283" width="209" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="fOK-nI-yrc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Rodrigo Mulkey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBO-WQ-505">
+                                <rect key="frame" x="229" y="331" width="142" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="oBO-WQ-505" secondAttribute="bottom" constant="248" id="0cU-Kg-fTf"/>
+                            <constraint firstItem="WRf-Cc-FW6" firstAttribute="top" secondItem="2I7-J5-QHG" secondAttribute="bottom" constant="15" id="4R4-l7-XGs"/>
+                            <constraint firstItem="WRf-Cc-FW6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XDJ-ey-h9D"/>
+                            <constraint firstItem="oBO-WQ-505" firstAttribute="top" secondItem="WRf-Cc-FW6" secondAttribute="bottom" constant="27" id="hYK-HD-WfK"/>
+                            <constraint firstItem="2I7-J5-QHG" firstAttribute="centerX" secondItem="WRf-Cc-FW6" secondAttribute="centerX" id="nsj-7W-O7W"/>
+                            <constraint firstItem="oBO-WQ-505" firstAttribute="centerX" secondItem="WRf-Cc-FW6" secondAttribute="centerX" id="zUj-6g-k6H"/>
+                            <constraint firstItem="2I7-J5-QHG" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="227" id="zbD-1Z-qbH"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
